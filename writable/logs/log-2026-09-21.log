@@ -1,0 +1,510 @@
+ERROR - 2026-09-21 14:37:34 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: YES) in C:\Users\isha\my-project\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'ci4', 3306, '', 0)
+#1 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\Database\BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\Model.php(255): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\Users\isha\my-project\app\Controllers\Customers.php(14): CodeIgniter\BaseModel->findAll()
+#7 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\CodeIgniter.php(974): App\Controllers\Customers->index()
+#8 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Customers))
+#9 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\Users\isha\my-project\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('C:\\Users\\isha\\m...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' (using password: YES) in C:\Users\isha\my-project\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\Database\BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\Model.php(255): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\Users\isha\my-project\app\Controllers\Customers.php(14): CodeIgniter\BaseModel->findAll()
+#6 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\CodeIgniter.php(974): App\Controllers\Customers->index()
+#7 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Customers))
+#8 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\Users\isha\my-project\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('C:\\Users\\isha\\m...')
+#13 {main}
+CRITICAL - 2026-09-21 14:37:34 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: YES)
+[Method: GET, Route: customers]
+in SYSTEMPATH\Database\BaseConnection.php on line 606.
+ 1 SYSTEMPATH\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `customers`', [], false)
+ 3 SYSTEMPATH\Model.php(255): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\Customers.php(14): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Customers->index()
+ 7 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Customers))
+ 8 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\isha\\my-project\\public\\index.php')
+ERROR - 2026-09-21 14:37:50 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: YES) in C:\Users\isha\my-project\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'ci4', 3306, '', 0)
+#1 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\Database\BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\Model.php(255): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\Users\isha\my-project\app\Controllers\Customers.php(14): CodeIgniter\BaseModel->findAll()
+#7 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\CodeIgniter.php(974): App\Controllers\Customers->index()
+#8 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Customers))
+#9 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\Users\isha\my-project\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('C:\\Users\\isha\\m...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' (using password: YES) in C:\Users\isha\my-project\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\Database\BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\Model.php(255): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\Users\isha\my-project\app\Controllers\Customers.php(14): CodeIgniter\BaseModel->findAll()
+#6 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\CodeIgniter.php(974): App\Controllers\Customers->index()
+#7 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Customers))
+#8 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\Users\isha\my-project\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('C:\\Users\\isha\\m...')
+#13 {main}
+CRITICAL - 2026-09-21 14:37:50 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: YES)
+[Method: GET, Route: customers]
+in SYSTEMPATH\Database\BaseConnection.php on line 606.
+ 1 SYSTEMPATH\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `customers`', [], false)
+ 3 SYSTEMPATH\Model.php(255): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\Customers.php(14): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Customers->index()
+ 7 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Customers))
+ 8 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\isha\\my-project\\public\\index.php')
+ERROR - 2026-09-21 14:37:53 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: YES) in C:\Users\isha\my-project\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'ci4', 3306, '', 0)
+#1 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\Database\BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\Model.php(255): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\Users\isha\my-project\app\Controllers\Users.php(14): CodeIgniter\BaseModel->findAll()
+#7 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\CodeIgniter.php(974): App\Controllers\Users->index()
+#8 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#9 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\Users\isha\my-project\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('C:\\Users\\isha\\m...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' (using password: YES) in C:\Users\isha\my-project\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\Database\BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\Model.php(255): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\Users\isha\my-project\app\Controllers\Users.php(14): CodeIgniter\BaseModel->findAll()
+#6 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\CodeIgniter.php(974): App\Controllers\Users->index()
+#7 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#8 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\Users\isha\my-project\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('C:\\Users\\isha\\m...')
+#13 {main}
+CRITICAL - 2026-09-21 14:37:53 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: YES)
+[Method: GET, Route: users]
+in SYSTEMPATH\Database\BaseConnection.php on line 606.
+ 1 SYSTEMPATH\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `users`', [], false)
+ 3 SYSTEMPATH\Model.php(255): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\Users.php(14): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Users->index()
+ 7 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+ 8 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\isha\\my-project\\public\\index.php')
+ERROR - 2026-09-21 14:37:57 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: YES) in C:\Users\isha\my-project\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'ci4', 3306, '', 0)
+#1 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\Database\BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\Model.php(255): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\Users\isha\my-project\app\Controllers\Customers.php(14): CodeIgniter\BaseModel->findAll()
+#7 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\CodeIgniter.php(974): App\Controllers\Customers->index()
+#8 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Customers))
+#9 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\Users\isha\my-project\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('C:\\Users\\isha\\m...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' (using password: YES) in C:\Users\isha\my-project\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\Database\BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\Model.php(255): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\Users\isha\my-project\app\Controllers\Customers.php(14): CodeIgniter\BaseModel->findAll()
+#6 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\CodeIgniter.php(974): App\Controllers\Customers->index()
+#7 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Customers))
+#8 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\Users\isha\my-project\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('C:\\Users\\isha\\m...')
+#13 {main}
+CRITICAL - 2026-09-21 14:37:57 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: YES)
+[Method: GET, Route: customers]
+in SYSTEMPATH\Database\BaseConnection.php on line 606.
+ 1 SYSTEMPATH\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `customers`', [], false)
+ 3 SYSTEMPATH\Model.php(255): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\Customers.php(14): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Customers->index()
+ 7 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Customers))
+ 8 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\isha\\my-project\\public\\index.php')
+ERROR - 2026-09-21 14:39:08 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: YES) in C:\Users\isha\my-project\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'ci4', 3306, '', 0)
+#1 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\Database\BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\Model.php(255): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\Users\isha\my-project\app\Controllers\Customers.php(14): CodeIgniter\BaseModel->findAll()
+#7 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\CodeIgniter.php(974): App\Controllers\Customers->index()
+#8 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Customers))
+#9 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\Users\isha\my-project\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('C:\\Users\\isha\\m...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' (using password: YES) in C:\Users\isha\my-project\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\Database\BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\Model.php(255): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\Users\isha\my-project\app\Controllers\Customers.php(14): CodeIgniter\BaseModel->findAll()
+#6 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\CodeIgniter.php(974): App\Controllers\Customers->index()
+#7 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Customers))
+#8 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\Users\isha\my-project\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('C:\\Users\\isha\\m...')
+#13 {main}
+CRITICAL - 2026-09-21 14:39:08 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: YES)
+[Method: GET, Route: customers]
+in SYSTEMPATH\Database\BaseConnection.php on line 606.
+ 1 SYSTEMPATH\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `customers`', [], false)
+ 3 SYSTEMPATH\Model.php(255): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\Customers.php(14): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Customers->index()
+ 7 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Customers))
+ 8 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\isha\\my-project\\public\\index.php')
+ERROR - 2026-09-21 14:39:09 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: YES) in C:\Users\isha\my-project\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'ci4', 3306, '', 0)
+#1 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\Database\BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\Model.php(255): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\Users\isha\my-project\app\Controllers\Customers.php(14): CodeIgniter\BaseModel->findAll()
+#7 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\CodeIgniter.php(974): App\Controllers\Customers->index()
+#8 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Customers))
+#9 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\Users\isha\my-project\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('C:\\Users\\isha\\m...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' (using password: YES) in C:\Users\isha\my-project\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\Database\BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\Model.php(255): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\Users\isha\my-project\app\Controllers\Customers.php(14): CodeIgniter\BaseModel->findAll()
+#6 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\CodeIgniter.php(974): App\Controllers\Customers->index()
+#7 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Customers))
+#8 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\Users\isha\my-project\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('C:\\Users\\isha\\m...')
+#13 {main}
+CRITICAL - 2026-09-21 14:39:09 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: YES)
+[Method: GET, Route: customers]
+in SYSTEMPATH\Database\BaseConnection.php on line 606.
+ 1 SYSTEMPATH\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `customers`', [], false)
+ 3 SYSTEMPATH\Model.php(255): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\Customers.php(14): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Customers->index()
+ 7 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Customers))
+ 8 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\isha\\my-project\\public\\index.php')
+ERROR - 2026-09-21 14:39:23 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: YES) in C:\Users\isha\my-project\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'ci4', 3306, '', 0)
+#1 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\Database\BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\Model.php(255): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\Users\isha\my-project\app\Controllers\Customers.php(14): CodeIgniter\BaseModel->findAll()
+#7 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\CodeIgniter.php(974): App\Controllers\Customers->index()
+#8 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Customers))
+#9 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\Users\isha\my-project\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('C:\\Users\\isha\\m...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' (using password: YES) in C:\Users\isha\my-project\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\Database\BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\Model.php(255): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\Users\isha\my-project\app\Controllers\Customers.php(14): CodeIgniter\BaseModel->findAll()
+#6 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\CodeIgniter.php(974): App\Controllers\Customers->index()
+#7 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Customers))
+#8 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\Users\isha\my-project\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('C:\\Users\\isha\\m...')
+#13 {main}
+CRITICAL - 2026-09-21 14:39:23 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: YES)
+[Method: GET, Route: customers]
+in SYSTEMPATH\Database\BaseConnection.php on line 606.
+ 1 SYSTEMPATH\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `customers`', [], false)
+ 3 SYSTEMPATH\Model.php(255): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\Customers.php(14): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Customers->index()
+ 7 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Customers))
+ 8 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\isha\\my-project\\public\\index.php')
+ERROR - 2026-09-21 14:40:31 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'pos.db' in C:\Users\isha\my-project\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'pos.db', 3306, '', 0)
+#1 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\Database\BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\Model.php(255): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\Users\isha\my-project\app\Controllers\Customers.php(14): CodeIgniter\BaseModel->findAll()
+#7 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\CodeIgniter.php(974): App\Controllers\Customers->index()
+#8 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Customers))
+#9 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\Users\isha\my-project\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('C:\\Users\\isha\\m...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'pos.db' in C:\Users\isha\my-project\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\Database\BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\Model.php(255): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\Users\isha\my-project\app\Controllers\Customers.php(14): CodeIgniter\BaseModel->findAll()
+#6 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\CodeIgniter.php(974): App\Controllers\Customers->index()
+#7 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Customers))
+#8 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\Users\isha\my-project\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('C:\\Users\\isha\\m...')
+#13 {main}
+CRITICAL - 2026-09-21 14:40:31 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'pos.db'
+[Method: GET, Route: customers]
+in SYSTEMPATH\Database\BaseConnection.php on line 606.
+ 1 SYSTEMPATH\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `customers`', [], false)
+ 3 SYSTEMPATH\Model.php(255): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\Customers.php(14): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Customers->index()
+ 7 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Customers))
+ 8 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\isha\\my-project\\public\\index.php')
+ERROR - 2026-09-21 14:40:35 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'pos.db' in C:\Users\isha\my-project\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'pos.db', 3306, '', 0)
+#1 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\Database\BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\Model.php(255): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\Users\isha\my-project\app\Controllers\Customers.php(14): CodeIgniter\BaseModel->findAll()
+#7 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\CodeIgniter.php(974): App\Controllers\Customers->index()
+#8 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Customers))
+#9 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\Users\isha\my-project\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('C:\\Users\\isha\\m...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'pos.db' in C:\Users\isha\my-project\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\Database\BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\Model.php(255): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\Users\isha\my-project\app\Controllers\Customers.php(14): CodeIgniter\BaseModel->findAll()
+#6 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\CodeIgniter.php(974): App\Controllers\Customers->index()
+#7 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Customers))
+#8 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\Users\isha\my-project\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('C:\\Users\\isha\\m...')
+#13 {main}
+CRITICAL - 2026-09-21 14:40:35 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'pos.db'
+[Method: GET, Route: customers]
+in SYSTEMPATH\Database\BaseConnection.php on line 606.
+ 1 SYSTEMPATH\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `customers`', [], false)
+ 3 SYSTEMPATH\Model.php(255): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\Customers.php(14): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Customers->index()
+ 7 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Customers))
+ 8 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\isha\\my-project\\public\\index.php')
+ERROR - 2026-09-21 14:40:49 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'pos.db' in C:\Users\isha\my-project\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'pos.db', 3306, '', 0)
+#1 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\Database\BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\Model.php(255): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\Users\isha\my-project\app\Controllers\Customers.php(14): CodeIgniter\BaseModel->findAll()
+#7 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\CodeIgniter.php(974): App\Controllers\Customers->index()
+#8 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Customers))
+#9 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\Users\isha\my-project\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('C:\\Users\\isha\\m...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'pos.db' in C:\Users\isha\my-project\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\Database\BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\Model.php(255): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\Users\isha\my-project\app\Controllers\Customers.php(14): CodeIgniter\BaseModel->findAll()
+#6 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\CodeIgniter.php(974): App\Controllers\Customers->index()
+#7 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Customers))
+#8 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\Users\isha\my-project\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\Users\isha\my-project\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('C:\\Users\\isha\\m...')
+#13 {main}
+CRITICAL - 2026-09-21 14:40:49 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'pos.db'
+[Method: GET, Route: customers]
+in SYSTEMPATH\Database\BaseConnection.php on line 606.
+ 1 SYSTEMPATH\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `customers`', [], false)
+ 3 SYSTEMPATH\Model.php(255): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\Customers.php(14): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Customers->index()
+ 7 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Customers))
+ 8 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\isha\\my-project\\public\\index.php')
